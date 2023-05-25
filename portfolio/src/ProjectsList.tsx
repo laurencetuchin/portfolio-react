@@ -1,15 +1,11 @@
-import "tailwindcss/tailwind.css";
-import "./App.css";
-import Intro from "./Intro";
 import Projects from "./Projects";
 
-const App: React.FC = () => {
+export default function ProjectsList() {
 	const projects = [
 		{
-			title: "NeuroReader",
-			description:
-				"Assists readers with customised formatting after they input text",
-			usedTech: ["react", "typescript", "tailwind", "tss"],
+			title: "Project 1",
+			description: "Description of project 1",
+			usedTech: ["react", "typescript, tailwind"],
 			imageUrl: "https://image.com/1",
 		},
 		{
@@ -25,14 +21,9 @@ const App: React.FC = () => {
 			imageUrl: "https://image.com/3",
 		},
 	];
-
 	return (
-		<>
-			<div></div>
-			<Intro />
-			<Projects projects={projects} />
-		</>
+		<div>
+			<Projects projects={projects: Project} />
+		</div>
 	);
-};
-
-export default App;
+}
