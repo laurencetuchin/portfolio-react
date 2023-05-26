@@ -32,8 +32,12 @@ const Projects: React.FC<ProjectsProps> = ({ projects, type }) => {
 								) : (
 									""
 								)}
-								<h3 className="mb-2 text-lg font-semibold">{project.title}</h3>
-								<p className="text-gray-600">{project.description}</p>
+								<h3 className="mb-2 text-lg font-semibold tracking-tight">
+									{project.title}
+								</h3>
+								<p className="tracking-tight text-gray-400">
+									{project.description}
+								</p>
 								<div>
 									<h4 className="mt-4 font-semibold text-gray-800">
 										Technologies:
