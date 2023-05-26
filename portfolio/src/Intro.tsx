@@ -100,7 +100,7 @@ export default function Intro() {
 					{currentWord}
 				</p>
 				<div className="py-6">
-					<button className="rounded-md border-0 border-current  bg-pink-200 text-lg font-bold text-slate-900 hover:bg-fuchsia-300">
+					<button className="rounded-md border-0 border-current  bg-sky-200 text-lg font-bold text-slate-900 hover:bg-sky-300">
 						Contact me
 					</button>
 					<ul className="flex justify-center py-6">
@@ -133,6 +133,23 @@ export default function Intro() {
 							<span className="sr-only">GitHub</span>
 						</li>
 					</ul>
+				</div>
+			</div>
+			<div className="py-12 sm:py-8 md:py-12 lg:py-12 xl:py-12 2xl:py-28">
+				<div className="relative">
+					<img
+						src="src/images/profile.png"
+						alt="Portfolio Profile photo of Laurence"
+						className="absolute h-auto max-w-full shadow-xl  drop-shadow-2xl"
+					/>
+					<div className=" inset-10 flex items-center justify-center">
+						<div className="h-80 w-80 rounded-full bg-yellow-500">
+							<div className="h-24 w-24 rounded-full bg-orange-500">
+								<div className="h-64 w-64 rounded-full bg-red-500"></div>
+							</div>
+							<div className="h-24 w-24 rounded-full bg-red-500"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
