@@ -19,6 +19,7 @@ export default function Intro() {
 		"outdoor adventures",
 		"travel",
 		"movies",
+		"fitness",
 	];
 	const [currentWord, setCurrentWord] = useState(interests[0]);
 	const [currentColorClass, setCurrentColorClass] = useState("");
@@ -83,7 +84,7 @@ export default function Intro() {
 	}, [currentWord]);
 
 	return (
-		<div className="grid grid-cols-2">
+		<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 			<div className="py-12 sm:py-8 md:py-12 lg:py-12 xl:py-12 2xl:py-28">
 				<p className="font-medium text-slate-600">Helloooo I'm</p>
 				<h1 className="text-4xl font-bold tracking-tight text-slate-700">
@@ -100,7 +101,10 @@ export default function Intro() {
 					{currentWord}
 				</p>
 				<div className="py-6">
-					<button className="rounded-md border-0 border-current  bg-sky-200 text-lg font-bold text-slate-900 hover:bg-sky-300">
+					{/* <button className="rounded-md border-0 border-current  bg-sky-200 text-lg font-bold text-slate-900 hover:bg-sky-300">
+						Contact me
+					</button> */}
+					<button className="bg-white-200 rounded-md border-0  border-current text-lg font-bold text-slate-900 hover:bg-sky-300">
 						Contact me
 					</button>
 					<ul className="flex justify-center py-6">
@@ -135,19 +139,20 @@ export default function Intro() {
 					</ul>
 				</div>
 			</div>
-			<div className="py-12 sm:py-8 md:py-12 lg:py-12 xl:py-12 2xl:py-28">
-				<div className="relative">
+			<div className=" py-12 sm:py-8 md:py-12 lg:py-12 xl:py-12 2xl:py-28">
+				<div className="relative border-4 border-solid border-black shadow-xl shadow-black  drop-shadow-2xl hover:opacity-50">
 					<img
 						src="src/images/profile.png"
 						alt="Portfolio Profile photo of Laurence"
-						className="absolute h-auto max-w-full shadow-xl  drop-shadow-2xl"
+						className="absolute max-w-full md:max-w-xs"
 					/>
-					<div className=" inset-10 flex items-center justify-center">
-						<div className="h-80 w-80 rounded-full bg-yellow-500">
-							<div className="h-24 w-24 rounded-full bg-orange-500">
-								<div className="h-64 w-64 rounded-full bg-red-500"></div>
+					<div className="static inset-10 flex items-center justify-center ">
+						<div className="static h-80 w-80 rounded-full bg-yellow-300 ">
+							<div className="static h-60 w-60 rounded-full bg-orange-300 ">
+								<div className="static h-40 w-40 rounded-full bg-orange-200">
+									<div className="static h-24 w-24 rounded-full bg-red-400"></div>
+								</div>
 							</div>
-							<div className="h-24 w-24 rounded-full bg-red-500"></div>
 						</div>
 					</div>
 				</div>
