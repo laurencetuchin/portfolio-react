@@ -105,7 +105,9 @@ export default function Intro() {
 						Contact me
 					</button> */}
 					<button className="bg-white-200 rounded-md border-0  border-current text-lg font-bold text-slate-900 hover:bg-sky-300">
-						Contact me
+						<a href="mailto:laurencetuchin@gmail.com?subject=Hello Laurence&body=Hello, my name is ">
+							Contact me
+						</a>
 					</button>
 					<ul className="flex justify-center py-6">
 						<li className="mr-5 text-xs">
@@ -139,8 +141,8 @@ export default function Intro() {
 					</ul>
 				</div>
 			</div>
-			<div className=" py-12 sm:py-8 md:py-12 lg:py-12 xl:py-12 2xl:py-28">
-				<div className="relative border-4 border-solid border-black shadow-xl shadow-black  drop-shadow-2xl hover:opacity-50">
+			<div className=" py-8 md:py-12 lg:py-12 xl:py-12 2xl:py-28">
+				<div className="relative border-4 border-solid border-black bg-gradient-to-b from-blue-100 to-pink-200 shadow-xl  shadow-black drop-shadow-2xl hover:opacity-50">
 					<img
 						src="src/images/profile.png"
 						alt="Portfolio Profile photo of Laurence"
