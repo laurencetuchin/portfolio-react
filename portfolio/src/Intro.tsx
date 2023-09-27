@@ -144,7 +144,7 @@ export default function Intro() {
 			<div className=" py-8 md:py-12 lg:py-12 xl:py-12 2xl:py-28">
 				<div className="relative border-4 border-solid border-black bg-gradient-to-b from-blue-100 to-pink-200 shadow-xl  shadow-black drop-shadow-2xl hover:opacity-50">
 					<img
-						src="src/images/profile.png"
+						src="/images/profile.png"
 						alt="Portfolio Profile photo of Laurence"
 						className="absolute max-w-full md:max-w-xs"
 					/>
