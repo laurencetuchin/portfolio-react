@@ -12,7 +12,7 @@ const App: React.FC = () => {
 			description:
 				"Assists readers with customised formatting after they input text. The text is transformed based on the users preferences and is output in a more readable format. It uses the useContext and useReducer API for state management. ",
 			usedTech: ["react", "javascript", "tailwindcss"],
-			imageUrl: "/src/images/neuro.gif",
+			imageUrl: "https://github.com/laurencetuchin/portfolio-react/blob/7e43ee3d8f2c4f49a303c7abf059ceeb9075604d/portfolio/public/images/neuro.gif",
 			github: "https://github.com/laurencetuchin/neuroreader",
 			deployedLink: "https://neuro-reader.netlify.app/",
 		},
