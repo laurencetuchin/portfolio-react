@@ -1,7 +1,9 @@
 import "tailwindcss/tailwind.css";
 import About from "./About";
 import "./App.css";
+import Footer from "./Footer";
 import Intro from "./Intro";
+import Navbar from "./Navbar";
 import Projects from "./Projects";
 import TechStack from "./TechStack";
 
@@ -20,7 +22,7 @@ const App: React.FC = () => {
 			title: "Solar Outdoor Light",
 			description:
 				"Basic product landing page using an Aliexpress product. Various interactive elements on the page including a countdown timer, product delivery calculator and glowing light elements. Responsive design.",
-			usedTech: ["html5", "css3", "javascipt", "bootstrap"],
+			usedTech: ["html5", "css3", "javascript", "bootstrap"],
 			imageUrl: "/images/solar-outdoor-light.png",
 			github: "https://github.com/laurencetuchin/solarlight",
 			deployedLink: "https://solar-garden-light.netlify.app/",
@@ -29,53 +31,38 @@ const App: React.FC = () => {
 			title: "Employee Management System API",
 			description:
 				"Our employee management system is designed to help managers keep track of important employee information and streamline team collaboration. With this system, managers can easily access and update employee profiles, track employment status, and set career goals.",
-			usedTech: [
-				"Java",
-				"spring",
-				"hibernate",
-				"JUnit",
-				"Postman",
-				"PostgreSQL",
-			],
-			imageUrl: "",
+			usedTech: ["Java", "spring", "hibernate", "JUnit", "Postman", "PostgreSQL"],
 			github: "https://github.com/laurencetuchin/employee-system-api",
-			deployedLink: "https://github.com/laurencetuchin/employee-system-api",
 		},
 	];
 
-	const openSourceProjects = [
-		{
-			title: "Neuro Reader",
-			description:
-				"Assists readers with customised formatting after they input text",
-			usedTech: ["react", "javascript", "tailwindcss", "tss"],
-			github: "https://github.com/laurencetuchin/neuroreader",
-		},
-		{
-			title: "Project 2",
-			description: "Description of project 2",
-			usedTech: ["react", "typescript, tailwind"],
-			github: "http",
-		},
-		{
-			title: "Project 3",
-			description: "Description of project 3",
-			usedTech: ["react", "typescript, tailwind"],
-			github: "http",
-		},
-	];
+	// Add your open source contributions here
+	const openSourceProjects: typeof personalProjects = [];
 
 	return (
 		<>
-			<div></div>
-			<Intro />
-			<About />
-			<Projects projects={personalProjects} type={"Personal"} />
-			<Projects
-				projects={openSourceProjects}
-				type={"Open source contributions"}
-			/>
-			<TechStack />
+			<Navbar />
+			<main className="mx-auto max-w-5xl px-6">
+				<section id="intro">
+					<Intro />
+				</section>
+				<section id="about">
+					<About />
+				</section>
+				<section id="projects">
+					<Projects projects={personalProjects} type={"Personal"} />
+					{openSourceProjects.length > 0 && (
+						<Projects
+							projects={openSourceProjects}
+							type={"Open source contributions"}
+						/>
+					)}
+				</section>
+				<section id="tech-stack">
+					<TechStack />
+				</section>
+			</main>
+			<Footer />
 		</>
 	);
 };
