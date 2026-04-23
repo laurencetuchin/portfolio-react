@@ -1,29 +1,35 @@
+const techs = [
+	"React",
+	"JavaScript",
+	"TypeScript",
+	"Java",
+	"Spring",
+	"Hibernate",
+	"PostgreSQL",
+	"HTML5",
+	"CSS3",
+	"TailwindCSS",
+	"Git",
+	"Postman",
+	"JUnit",
+	"Bootstrap",
+];
+
 export default function TechStack() {
 	return (
-		<div className="py-12 sm:py-8 md:py-12 lg:py-12 xl:py-12 2xl:py-28">
-			<h2 className="mt-3 text-lg font-medium tracking-tight text-slate-600 sm:text-xl md:mb-8">
+		<div className="py-12">
+			<h2 className="mb-6 text-xl font-bold uppercase tracking-tight text-slate-600 md:text-2xl">
 				Tech Stack
 			</h2>
-			<div>
-				<ul>
-					<div>
-						<span>
-							<li>React</li>
-							<li>JavaScript</li>
-							<li>TypeScript</li>
-							<li>Java</li>
-							<li>Spring</li>
-						</span>
-						<span>
-							<li>Postman</li>
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>Git</li>
-							<li>TailwindCSS</li>
-						</span>
-					</div>
-				</ul>
-			</div>
+			<ul className="flex flex-wrap gap-3">
+				{techs.map((tech) => (
+					<li
+						key={tech}
+						className="inline-flex items-center rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm">
+						{tech}
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 }
