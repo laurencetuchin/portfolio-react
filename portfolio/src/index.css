@@ -11,8 +11,50 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+
+	/* Driven by src/lib/scrollProgress.ts when a DOM consumer subscribes. */
+	--scroll-progress: 0;
 }
 
-html {
-	scroll-behavior: smooth;
+/*
+ * Ungated smooth scrolling overrides the user's reduced-motion preference on
+ * every anchor jump, so gate it.
+ */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+body {
+	color: #413770; /* dream-800 */
+}
+
+@layer components {
+	/*
+	 * Frosted surface used by every card on the site. Cards read as glass over
+	 * the cloud field rather than opaque white boxes punched through it.
+	 */
+	.glass {
+		@apply rounded-dream bg-cloud-200/70 shadow-dream ring-1 ring-white/70 backdrop-blur-md;
+	}
+
+	.glass-soft {
+		@apply rounded-dream bg-cloud-200/50 shadow-lift ring-1 ring-white/60 backdrop-blur-sm;
+	}
+}
+
+@layer utilities {
+	/* Screen-reader-only text, for the static mirror of animated content. */
+	.sr-only-text {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+	}
 }

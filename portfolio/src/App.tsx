@@ -1,6 +1,5 @@
-import "tailwindcss/tailwind.css";
 import About from "./About";
-import "./App.css";
+import SkyBackdrop from "./components/SkyBackdrop";
 import Footer from "./Footer";
 import Intro from "./Intro";
 import Navbar from "./Navbar";
@@ -41,8 +40,9 @@ const App: React.FC = () => {
 
 	return (
 		<>
+			<SkyBackdrop />
 			<Navbar />
-			<main className="mx-auto max-w-5xl px-6">
+			<main className="relative z-10 mx-auto max-w-5xl px-6">
 				<section id="intro">
 					<Intro />
 				</section>
