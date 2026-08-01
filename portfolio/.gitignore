@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Drafts from `npm run assets:generate` — never committed.
+.asset-drafts/
