@@ -4,13 +4,37 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Laurence Portfolio</title>
+		<meta name="theme-color" content="#F6F0FF" />
+		<title>Laurence Tuchin — Software Developer</title>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<!--
+			Inlined so the dream gradient paints on the very first frame, before the CSS
+			bundle or any JS arrives. Without this there is a white flash underneath the
+			transparent WebGL canvas. SkyBackdrop takes over once React mounts.
+		-->
+		<style>
+			html,
+			body {
+				margin: 0;
+				background-color: #f6f0ff;
+			}
+			body {
+				min-height: 100svh;
+				background-image: radial-gradient(
+					120% 85% at 50% 0%,
+					#fff1f4 0%,
+					#f6f0ff 34%,
+					#e9defb 66%,
+					#dde6fa 100%
+				);
+				background-attachment: fixed;
+			}
+		</style>
 	</head>
-	<body class="min-h-screen bg-gradient-to-b from-blue-100 to-pink-200">
+	<body>
 		<div id="root"></div>
 		<script type="module" src="/src/main.tsx"></script>
 	</body>

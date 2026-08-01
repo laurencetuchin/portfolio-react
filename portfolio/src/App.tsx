@@ -1,6 +1,6 @@
-import "tailwindcss/tailwind.css";
 import About from "./About";
-import "./App.css";
+import CloudCanvas from "./components/CloudCanvas";
+import SkyBackdrop from "./components/SkyBackdrop";
 import Footer from "./Footer";
 import Intro from "./Intro";
 import Navbar from "./Navbar";
@@ -41,15 +41,33 @@ const App: React.FC = () => {
 
 	return (
 		<>
+			<SkyBackdrop />
+			<CloudCanvas targetId="intro" />
 			<Navbar />
-			<main className="mx-auto max-w-5xl px-6">
-				<section id="intro">
+
+			{/*
+			 * The hero is full-bleed so the cloud field reads edge to edge; only
+			 * its inner container is constrained.
+			 *
+			 * Every section carries scroll-mt-24 because the sticky navbar would
+			 * otherwise cover the heading an anchor link jumps to, and tabIndex
+			 * so keyboard focus follows that jump.
+			 */}
+			<section
+				id="intro"
+				tabIndex={-1}
+				className="relative z-10 min-h-[100svh] scroll-mt-24 px-6"
+			>
+				<div className="mx-auto max-w-5xl">
 					<Intro />
-				</section>
-				<section id="about">
+				</div>
+			</section>
+
+			<main className="relative z-10 mx-auto max-w-5xl px-6">
+				<section id="about" tabIndex={-1} className="scroll-mt-24">
 					<About />
 				</section>
-				<section id="projects">
+				<section id="projects" tabIndex={-1} className="scroll-mt-24">
 					<Projects projects={personalProjects} type={"Personal"} />
 					{openSourceProjects.length > 0 && (
 						<Projects
@@ -58,7 +76,7 @@ const App: React.FC = () => {
 						/>
 					)}
 				</section>
-				<section id="tech-stack">
+				<section id="tech-stack" tabIndex={-1} className="scroll-mt-24">
 					<TechStack />
 				</section>
 			</main>
